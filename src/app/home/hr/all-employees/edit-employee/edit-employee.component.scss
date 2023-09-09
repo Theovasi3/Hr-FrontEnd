@@ -1,0 +1,150 @@
+h1 {
+  color: rgba(226, 135, 50, 1);
+  margin: 10px 0;
+  text-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+h2{
+  color: rgba(226, 135, 50, 1);
+  text-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+mat-spinner{
+  position: absolute;
+  top: 50%;
+  left: 54%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+}
+
+mat-form-field{
+  width: 15vw;
+}
+
+.content {
+  border-radius: 10px;
+  padding: 5vh 5vw;
+}
+
+.content form{
+  background-color: #D9D9D9;
+  padding: 4vh 2vw;
+  margin-bottom: 25px;
+  min-height: 290px;
+  max-height: fit-content;
+  min-width: 270px
+}
+
+.details-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.employee-details {
+
+}
+
+.contact-details{
+
+}
+
+.rest-details{
+
+}
+
+.add-leave-btn{
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.add-leave-btn-options{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btn-actions{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.leave-options{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.icon{
+  scale: 107%;
+  opacity: 90%;
+  transition: scale 0.14s ease
+}
+
+.icon:hover{
+  cursor: pointer;
+  scale: 118%;
+  transform: rotate(3deg);
+  color: rgb(114, 74, 0);
+}
+
+.bin{
+  margin-left: 10px;
+}
+
+.bin:hover{
+  color: rgb(141, 6, 6);
+}
+
+.btn-actions *{
+  margin: 10px;
+}
+
+.header *{
+  background-color: #252525;
+  color: orange;
+}
+
+.even-row {
+  background-color: #E9E9E9; /* Set the background color for even rows */
+}
+
+
+/* Add a class for odd rows */
+.odd-row {
+  background-color: #d6d4d4; /* Set the background color for odd rows */
+}
+
+.header-row {
+  transition: background-color 0.34s ease; /* Add a smooth transition effect */
+}
+
+/* Style for even rows on hover */
+.header-row.even-row:hover {
+  background-color: rgba(255, 145, 0, 0.305); /* Change this to your desired color */
+}
+
+/* Style for odd rows on hover */
+.header-row.odd-row:hover {
+  background-color: rgba(255, 145, 0, 0.305); /* Change this to your desired color */
+}
+
+.active{
+  margin-right: 80px;
+  text-align: center;
+  padding: 5px;
+  background-color: green;
+  border-radius: 5px;
+  color: white;
+}
+
+.inactive{
+  margin-right: 80px;
+  text-align: center;
+  padding: 5px;
+  background-color: red;
+  border-radius: 5px;
+  color: white;
+}
+

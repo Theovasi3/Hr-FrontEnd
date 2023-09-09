@@ -1,0 +1,69 @@
+@import '../../../../../src/styles';
+main{
+  padding: 5vh 0 0 0;
+  margin: 5vh 0 5vh 5vw;
+  display: none;
+}
+
+main.loaded{
+  display: block;
+}
+
+.table-container{
+    margin-right: 5vw ;
+    overflow: auto;
+}
+
+h1{
+    color: orange;
+}
+
+mat-paginator{
+  background-color: #d6d4d4;
+  color: $myFixedColor;
+}
+
+mat-paginator.even{
+  background-color: #E9E9E9;
+}
+
+a{
+  line-height: 60px;
+  color: #EB8C33;
+  cursor: pointer;
+}
+
+.header *{
+    background-color: #252525;
+    color: orange;
+}
+
+.header-row:nth-child(odd) {
+  background-color: #d6d4d4;
+}
+
+.header-row:nth-child(even) {
+  background-color: #E9E9E9;
+}
+
+.header-row {
+    transition: background-color 0.34s ease; /* Add a smooth transition effect */
+  }
+
+  /* Style for even rows on hover */
+  .header-row:nth-child(even):hover {
+    background-color: rgba(255, 145, 0, 0.305); /* Change this to your desired color */
+  }
+
+  /* Style for odd rows on hover */
+  .header-row:nth-child(odd):hover {
+    background-color: rgba(255, 145, 0, 0.305); /* Change this to your desired color */
+  }
+
+  mat-spinner{
+    position: absolute;
+    top: 50%;
+    left: 54%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+  }

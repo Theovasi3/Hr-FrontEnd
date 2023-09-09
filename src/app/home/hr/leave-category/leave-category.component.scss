@@ -1,0 +1,153 @@
+@import '../../../../../src/styles';
+
+main{
+  padding: 5vh 0 0 0;
+  margin: 5vh 0 5vh 5vw;
+  display: none;
+}
+
+main.loaded{
+  display: block;
+}
+
+h1{
+  color: orange;
+}
+
+.table-container{
+  margin-right: 5vw ;
+  overflow: auto;
+}
+
+.header *{
+  background-color: #252525;
+  color: orange;
+}
+
+.even-row {
+  background-color: #E9E9E9; /* Set the background color for even rows */
+}
+
+/* Add a class for odd rows */
+.odd-row {
+  background-color: #d6d4d4; /* Set the background color for odd rows */
+}
+
+.header-row {
+  transition: background-color 0.34s ease; /* Add a smooth transition effect */
+}
+
+/* Style for even rows on hover */
+.header-row.even-row:hover {
+  background-color: rgba(255, 145, 0, 0.305); /* Change this to your desired color */
+}
+
+/* Style for odd rows on hover */
+.header-row.odd-row:hover {
+  background-color: rgba(255, 145, 0, 0.305); /* Change this to your desired color */
+}
+
+.active{
+  width: 50%;
+  text-align: center;
+  padding: 5px;
+  background-color: green;
+  border-radius: 5px;
+  color: white;
+}
+
+.inactive{
+  width: 50%;
+  text-align: center;
+  padding: 5px;
+  background-color: red;
+  border-radius: 5px;
+  color: white;
+}
+
+.filters{
+  display: flex;
+  justify-content: space-between;
+  margin-right: 5vw;
+}
+
+.left-filter{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.status-filter{
+  margin-left: 10px;
+  padding-top: 15px;
+}
+
+.title-filter{
+  padding-top: 15px;
+  margin-left: 10px;
+  width: 100%;
+}
+
+.add-btn{
+  margin-top: 20px;
+  padding-top: 15px;
+  margin-left: 10px;
+}
+
+.add-category-btn{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.add-category-btn mat-icon{
+  margin-top: 5px;
+}
+
+.add-category-btn span{
+  margin-left: 5px;
+}
+
+.icon{
+  scale: 107%;
+  opacity: 90%;
+  transition: scale 0.14s ease
+}
+
+.icon:hover{
+  cursor: pointer;
+  scale: 118%;
+  transform: rotate(3deg);
+  color: rgb(114, 74, 0);
+}
+
+.no-data-row{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.no-data-row span{
+  font-size: 18px;
+  color: #ae5a00;
+}
+
+mat-table mat-header-cell, mat-table mat-cell{
+  justify-content: center;
+}
+
+mat-spinner{
+  position: absolute;
+  top: 50%;
+  left: 54%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+}
+
+mat-paginator{
+  background-color: #d6d4d4;
+  color: $myFixedColor;
+}
+
+mat-paginator.even{
+  background-color: #E9E9E9;
+}

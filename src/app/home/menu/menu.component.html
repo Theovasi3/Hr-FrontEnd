@@ -1,0 +1,49 @@
+<nav class="toolbar">
+  <a class="logo-link" (click)="navigateTo('landing')" matTooltip="Αρχική">
+    <img class="logo" src="./assets/logo.png" alt="The application's logo">
+  </a>
+
+
+  <ul class="tabs">
+    <li class="tab">
+      <a (click)="navigateTo('MyDetails')">ΠΡΟΦΙΛ</a>
+    </li>
+
+    <li class="tab dropdown">
+      <a>ΑΔΕΙΕΣ <span class="arrow"><mat-icon style="display: inline-block; position: fixed;">arrow_drop_down_circle</mat-icon></span></a>
+      <div class="dropdown-content">
+        <a (click)="navigateTo('leaves/requests')">ΑΙΤΗΜΑΤΑ</a>
+        <a (click)="navigateTo('leaves/restLeaves')">ΥΠΟΛΟΙΠΑ</a>
+      </div>
+    </li>
+
+    <li class="tab">
+      <a (click)="navigateTo('calendar')">ΗΜΕΡΟΛΟΓΙΟ</a>
+    </li>
+  </ul>
+
+  <div  class="logout">
+    <div class="reload">
+      <span class="reload-timer {{lessThanMinute? 'one-minute' : ''}}" >{{ minutes < 10 ? '0' : ''}}{{minutes}}:{{ seconds < 10 ? '0' : ''}}{{seconds}}</span>
+    </div>
+    <a type="submit" (click)="doLogout()" id="logoutButton" matTooltip="Αποσύνδεση">
+      <img src="./assets/logout.png" alt="Logout"/>
+    </a>
+  </div>
+  <mat-icon (click)="toggleMobileDropdown()" class="sandwich">menu</mat-icon>
+
+</nav>
+
+  <nav class="mobile-dropdown" [ngClass]="{'visible': isMobileDropdownVisible}">
+    <mat-icon style="margin: 0;"> person_pin</mat-icon>
+    <a (click)="navigateTo('MyDetails')">ΠΡΟΦΙΛ</a>
+    <hr>
+    <mat-icon style="margin: 0;">event_note</mat-icon>
+    <a (click)="navigateTo('leaves/requests')">ΑΙΤΗΜΑΤΑ</a>
+    <a (click)="navigateTo('leaves/restLeaves')">ΥΠΟΛΟΙΠΑ</a>
+    <hr>
+    <a type="submit" (click)="doLogout()" id="logoutButton" matTooltip="Αποσύνδεση">
+      ΑΠΟΣΥΝΔΕΣΗ
+      <mat-icon style="margin: 0;">exit_to_app</mat-icon>
+    </a>
+</nav>

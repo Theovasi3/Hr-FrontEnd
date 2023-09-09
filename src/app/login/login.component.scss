@@ -1,0 +1,163 @@
+@import '../../styles.scss';
+main{
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  overflow: hidden;
+  background-image: url("/assets/background.svg");
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+#accesspanel{
+  z-index: 500;
+  width: 350px; /* Set the desired width of the form */
+  height: 30vh;
+  min-height: 310px;
+  background-color: #222222f3;
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 30px;
+  margin: auto 19vw auto 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  //margin: auto 10vw auto 0;
+}
+
+input[type='submit']{
+  background-color: $myFixedColor;
+  border: none;
+  padding: 20px 30px;
+  cursor: pointer;
+  font-size: 25px;
+  border-radius: 15px;
+}
+
+.error{
+  margin: 0;
+  color: red;
+  text-align: center;
+  min-height: 40px;
+}
+
+svg{
+  position: absolute;
+  height: 100%;
+  width: auto;
+  z-index: -10;
+  top: 0;
+  left: 0;
+  margin-right: 50%;
+}
+
+.logo{
+  position: absolute;
+  z-index: 20;
+  left: 2vw;
+  top: 2vh;
+  width: 29vh;
+}
+
+.inset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  max-width: 300px; /* Adjust the width as needed */
+  padding-bottom: 15px;
+}
+
+p {
+  margin: 10px 0;
+}
+
+input {
+  
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+input:focus {
+  outline: none;
+  border-color: rgba(226,135,50,255); /* Change to your desired focus color */
+  box-shadow: 0 0 5px black; /* Change to your desired focus box shadow */
+}
+
+input.submit{
+  padding-inline: 50px; 
+  font-size: 13pt;
+  transition: background-color 0.12s ease;
+}
+
+input.submit:hover{
+  background-color: #b45b1f;
+}
+
+#litheader{
+  display: flex;
+  color:rgba(226,135,50,255);
+  height: 30px;
+  align-items: center;
+  justify-content: center; 
+  margin: 0;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+.footer-text {
+  z-index: 100;
+  color: black;
+  font-size: 14px;
+}
+
+.footer {
+  z-index: 100;
+  display: flex;
+  background-image: linear-gradient(
+    to right,
+    white,
+    rgba(226,135,50,255)
+  );
+  
+  height: 100px;
+  width: 100vw;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+@media screen and (max-width: 768px){
+
+  main{
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+
+  #accesspanel{
+    margin: 5vh auto;
+  }
+
+  .logo{
+    position: unset;
+    display: block;
+    margin: 0 auto;
+    height: 13vh;
+    width: auto;
+  }
+}
